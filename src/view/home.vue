@@ -1,7 +1,7 @@
 <template>
   <div id="home">
-      <img class="main-img" src="../static/img/banner.png" />
-      <img class="img1" src="../static/img/home1.png" alt="">
+      <img class="main-img" :src="$i18n.locale=='zh'?mainImg1:mainImg2" />
+      <img :class="$i18n.locale=='zh'?'img1_zh':'img1'" :src="$i18n.locale=='zh'?hImg1:hImg2" alt="">
       <img class="img2" src="../static/img/foot.png" alt="">
       <div class="content">
         <div class="content-top">
@@ -9,9 +9,10 @@
           <div class="rt">
               <p style="margin-bottom:24px;">{{$t("Home.content1.p1")}}</p>
               <p>{{$t("Home.content2.p2")}}</p>
+              <p v-show="$i18n.locale=='zh'" class="tt">{{$t("Home.content3.p3")}}</p>
           </div>
         </div>
-        <p class="tt">{{$t("Home.content3.p3")}}</p>
+        <p v-show="$i18n.locale != 'zh'" class="tt">{{$t("Home.content3.p3")}}</p>
         <p class="tt ts">{{$t("Home.content4.p4")}}</p>
         <p class="tt">{{$t("Home.content5.p5")}}</p>
       </div>
@@ -21,8 +22,14 @@
 export default {
   data(){
     return {
-      
+      mainImg1:require('../static/img/banner_zh.png'),
+      mainImg2:require('../static/img/banner.png'),
+      hImg1:require('../static/img/home_zh.png'),
+      hImg2:require('../static/img/home1.png')
     }
+  },
+  created(){
+    window.localStorage.setItem('activeNav',1)
   },
   methods:{
 
@@ -47,6 +54,11 @@ export default {
     left:50%;
     transform: translateX(-50%);
     z-index:1; */
+  }
+  .img1_zh{
+    width: 318px;
+    height:236px;
+    margin: -54px auto 32px;
   }
   .img2{
     width: 100%;

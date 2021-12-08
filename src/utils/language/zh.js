@@ -17,5 +17,23 @@ const zh = {
     about:LG.nav.ZH,
     CAST:LG.nav.ZH
   },
+  Meet:{
+    BV1:LG.meet.ZH,
+    BV2:LG.meet.ZH,
+    BV3:LG.meet.ZH,
+    BV4:LG.meet.ZH,
+    BV5:LG.meet.ZH,
+    BV6:LG.meet.ZH,
+    BV7:LG.meet.ZH,
+    M1:LG.meet.ZH,
+    M2:LG.meet.ZH,
+    M3:LG.meet.ZH,
+    M4:LG.meet.ZH,
+    M5:LG.meet.ZH,
+    M6:LG.meet.ZH,
+    M7:LG.meet.ZH,
+    M11:LG.meet.ZH,
+    personC:LG.meet.ZH,
+  }
 }
 export default zh  //暴露出去
