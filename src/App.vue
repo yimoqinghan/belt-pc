@@ -31,8 +31,8 @@ export default {
     }
   },
   created(){
-    if(window.localStorage.getItem('activeNav')){
-      this.activeIndex = window.localStorage.getItem('activeNav')
+    if(window.sessionStorage.getItem('activeNav')){
+      this.activeIndex = window.sessionStorage.getItem('activeNav')
     }
   },
   methods:{

@@ -396,7 +396,7 @@ export default {
     }
   },
   created(){
-    window.localStorage.setItem('activeNav',2)
+    window.sessionStorage.setItem('activeNav',2)
   },
   methods:{
     changeMet(value){

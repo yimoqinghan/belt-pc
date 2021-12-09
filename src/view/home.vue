@@ -29,7 +29,7 @@ export default {
     }
   },
   created(){
-    window.localStorage.setItem('activeNav',1)
+    window.sessionStorage.setItem('activeNav',1)
   },
   methods:{
 
