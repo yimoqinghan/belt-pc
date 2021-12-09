@@ -15,6 +15,8 @@ const meet={
       m5:'Parallel Symposium 4 Reproduction Medicine',
       m6:'Parallel Symposium 5 Anatomical Science Education',
       m7:'Parallel Symposium 6 Tissue Engineering',
+      mo1:'晚宴',
+      mo2:'闭幕式',
       pserson:{
         p1:{
           title:'',
@@ -194,6 +196,8 @@ const meet={
     m5:'Parallel Symposium 4 Reproduction Medicine',
     m6:'Parallel Symposium 5 Anatomical Science Education',
     m7:'Parallel Symposium 6 Tissue Engineering',
+    mo1:'Dinner',
+    mo2:'Closing Ceremony',
     pserson:{
       p1:{
         title:'',

@@ -33,6 +33,8 @@ const en = {
     M6:LG.meet.EN,
     M7:LG.meet.EN,
     M11:LG.meet.EN,
+    MO1:LG.meet.EN,
+    MO2:LG.meet.EN,
     personC:LG.meet.EN,
   }
 }

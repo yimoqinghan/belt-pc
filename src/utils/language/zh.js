@@ -33,6 +33,8 @@ const zh = {
     M6:LG.meet.ZH,
     M7:LG.meet.ZH,
     M11:LG.meet.ZH,
+    MO1:LG.meet.ZH,
+    MO2:LG.meet.ZH,
     personC:LG.meet.ZH,
   }
 }

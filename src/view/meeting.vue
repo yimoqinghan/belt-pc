@@ -104,13 +104,13 @@
           <li>
             <span class="time-string">17:45-18:00</span>
             <div class="ct">
-              <p class="ft rt">闭幕式</p>
+              <p class="ft rt">{{$t("Meet.MO2:mo2")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">18:00-20:00</span>
             <div class="ct">
-              <p class="ft rt">晚宴</p>
+              <p class="ft rt">{{$t("Meet.MO1:mo1")}}</p>
             </div>
           </li>
         </ul>
