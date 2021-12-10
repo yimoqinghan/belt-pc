@@ -1,7 +1,6 @@
 <template>
   <div id="metting">
     <img class="main-img" :src="$i18n.locale=='zh'?mainImg1:mainImg2" alt="">
-    <img :class="$i18n.locale=='zh'?'img-zh':'img-en'" :src="$i18n.locale=='zh'?Img1:Img2" alt="">
     <ul class="list">
       <li class="met" :class="activeMetting == 1?'active':''" @click="changeMet(1)"><span>{{$t("Meet.BV1.v1")}}</span></li>
       <li class="met" :class="activeMetting == 2?'active':''" @click="changeMet(2)"><span>{{$t("Meet.BV2.v2")}}</span></li>
@@ -11,6 +10,7 @@
       <li class="met" :class="activeMetting == 6?'active':''" @click="changeMet(6)"><span>{{$t("Meet.BV6.v6")}}</span></li>
       <li class="met" :class="activeMetting == 7?'active':''" @click="changeMet(7)"><span>{{$t("Meet.BV7.v7")}}</span></li>
     </ul>
+    <img :class="$i18n.locale=='zh'?'img-zh':'img-en'" :src="$i18n.locale=='zh'?Img1:Img2" alt="">
     <!-- 主会议 -->
     <div class="met-box" v-show="activeMetting == 1">
       <div class="line">{{$t("Meet.M1.m1")}}</div>
@@ -19,22 +19,29 @@
           <li>
             <span class="time-string">08:30-08:35</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p1.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p1.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet.p1.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet.p1.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">08:35-08:45</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p2.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p2.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet.p2.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet.p2.ct")}}</p>
             </div>
           </li>
           <li>
-            <span class="time-string">08:45-09:00</span>
+            <span class="time-string">08:45-08:50</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p3.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p3.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet.p4.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet.p4.ct")}}</p>
+            </div>
+          </li>
+          <li>
+            <span class="time-string">08:50-09:00</span>
+            <div class="ct">
+              <p class="ft">{{$t("Meet.personC.pserson.meet.p5.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet.p5.ct")}}</p>
             </div>
           </li>
         </ul>
@@ -49,41 +56,41 @@
           <li>
             <span class="time-string">09:15-09:45</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p4.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p4.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p4.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet.p6.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet.p6.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet.p6.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">09:45-10:15</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p5.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p5.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p5.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet.p7.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet.p7.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet.p7.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">10:15-10:45</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p6.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p6.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p6.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet.p8.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet.p8.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet.p8.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">10:45-11:15</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p7.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p7.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p7.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet.p9.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet.p9.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet.p9.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">11:15-11:45</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p8.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p8.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p8.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet.p10.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet.p10.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet.p10.ct")}}</p>
             </div>
           </li>
         </ul>
@@ -104,19 +111,27 @@
           <li>
             <span class="time-string">17:45-18:00</span>
             <div class="ct">
-              <p class="ft rt">{{$t("Meet.MO2:mo2")}}</p>
+              <p class="ft rt">{{$t("Meet.MO2.mo2")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">18:00-20:00</span>
             <div class="ct">
-              <p class="ft rt">{{$t("Meet.MO1:mo1")}}</p>
+              <p class="ft rt">{{$t("Meet.MO1.mo1")}}</p>
             </div>
           </li>
         </ul>
       </div>
       <img class="meet_bt" src="../static/img/meet_bt.png" alt="">
+      <ul class="ps-list">
+          <li v-for="item in 10" :key="item">
+            <img :src="repFn('meet',item)" alt="">
+            <p class="name">{{repNameTxt('meet',item)}}</p>
+            <p class="ctt">{{repCTxt('meet',item)}}</p>
+          </li>
+      </ul>
     </div>
+    <!-- 分会场1 -->
     <div class="met-box" v-show="activeMetting == 2">
       <div class="line">{{$t("Meet.M2.m2")}}</div>
       <div class="time">
@@ -124,42 +139,52 @@
           <li>
             <span class="time-string">13:30-14:00</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p9.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p9.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p9.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet1.p1.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet1.p1.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet1.p1.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">14:00-14:30</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p10.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p10.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p10.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet1.p2.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet1.p2.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet1.p2.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">14:30-15:00</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p11.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p11.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p11.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet1.p3.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet1.p3.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet1.p3.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">15:00-15:30</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p12.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p12.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p12.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet1.p4.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet1.p4.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet1.p4.ct")}}</p>
             </div>
           </li>
         </ul>
         <div class="person">
           <p>Chair：</p>
           <p>Bing-Yin SU</p>
+          <p>Shao-Ming Huang</p>
         </div>
       </div>
+      <img class="meet_bt" src="../static/img/meet_bt.png" alt="">
+      <ul class="ps-list">
+          <li v-for="item in 6" :key="item">
+            <img :src="repFn('meet1',item)" alt="">
+            <p class="name">{{repNameTxt('meet1',item)}}</p>
+            <p class="ctt">{{repCTxt('meet1',item)}}</p>
+          </li>
+      </ul>
     </div>
+    <!-- 分会场2 -->
     <div class="met-box" v-show="activeMetting == 3">
       <div class="line">{{$t("Meet.M3.m3")}}</div>
       <div class="time">
@@ -167,42 +192,52 @@
           <li>
             <span class="time-string">13:30-14:00</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p13.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p13.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p13.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet2.p1.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet2.p1.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet2.p1.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">14:00-14:30</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p14.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p14.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p14.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet2.p2.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet2.p2.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet2.p2.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">14:30-15:00</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p15.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p15.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p15.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet2.p3.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet2.p3.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet2.p3.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">15:00-15:30</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p16.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p16.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p16.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet2.p4.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet2.p4.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet2.p4.ct")}}</p>
             </div>
           </li>
         </ul>
         <div class="person">
           <p>Chair：</p>
           <p>Hong-Quan ZHANG</p>
+          <p>Qing-Mei Zhang</p>
         </div>
       </div>
+      <img class="meet_bt" src="../static/img/meet_bt.png" alt="">
+      <ul class="ps-list">
+          <li v-for="item in 5" :key="item">
+            <img :src="repFn('meet2',item)" alt="">
+            <p class="name">{{repNameTxt('meet2',item)}}</p>
+            <p class="ctt">{{repCTxt('meet2',item)}}</p>
+          </li>
+      </ul>
     </div>
+    <!-- 分会场3 -->
     <div class="met-box" v-show="activeMetting == 4">
       <div class="line">{{$t("Meet.M4.m4")}}</div>
       <div class="time">
@@ -210,42 +245,52 @@
           <li>
             <span class="time-string">13:30-14:00</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p17.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p17.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p17.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet3.p1.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet3.p1.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet3.p1.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">14:00-14:30</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p18.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p18.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p18.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet3.p2.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet3.p2.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet3.p2.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">14:30-15:00</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p19.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p19.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p19.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet3.p3.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet3.p3.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet3.p3.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">15:00-15:30</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p20.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p20.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p20.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet3.p4.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet3.p4.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet3.p4.ct")}}</p>
             </div>
           </li>
         </ul>
         <div class="person">
           <p>Chair：</p>
           <p>Hong-Jin SUI</p>
+          <p>Guo-He Tan</p>
         </div>
       </div>
+      <img class="meet_bt" src="../static/img/meet_bt.png" alt="">
+      <ul class="ps-list">
+          <li v-for="item in 6" :key="item">
+            <img :src="repFn('meet3',item)" alt="">
+            <p class="name">{{repNameTxt('meet3',item)}}</p>
+            <p class="ctt">{{repCTxt('meet3',item)}}</p>
+          </li>
+      </ul>
     </div>
+    <!-- 分会场4 -->
     <div class="met-box" v-show="activeMetting == 5">
       <div class="line">{{$t("Meet.M5.m5")}}</div>
       <div class="time">
@@ -253,42 +298,52 @@
           <li>
             <span class="time-string">15:45-16:15</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p21.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p21.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p21.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet4.p1.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet4.p1.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet4.p1.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">16:15-16:45</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p22.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p22.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p22.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet4.p2.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet4.p2.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet4.p2.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">16:45-17:15</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p23.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p23.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p23.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet4.p3.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet4.p3.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet4.p3.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">17:15-17:45</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p24.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p24.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p24.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet4.p4.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet4.p4.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet4.p4.ct")}}</p>
             </div>
           </li>
         </ul>
         <div class="person">
           <p>Chair：</p>
           <p>Yue WANG</p>
+          <p>Qiong-Ying Deng</p>
         </div>
       </div>
+      <img class="meet_bt" src="../static/img/meet_bt.png" alt="">
+      <ul class="ps-list">
+          <li v-for="item in 6" :key="item">
+            <img :src="repFn('meet4',item)" alt="">
+            <p class="name">{{repNameTxt('meet4',item)}}</p>
+            <p class="ctt">{{repCTxt('meet4',item)}}</p>
+          </li>
+      </ul>
     </div>
+    <!-- 分会场5 -->
     <div class="met-box" v-show="activeMetting == 6">
       <div class="line">{{$t("Meet.M6.m6")}}</div>
       <div class="time">
@@ -296,42 +351,52 @@
           <li>
             <span class="time-string">15:45-16:15</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p25.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p25.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p25.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet5.p1.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet5.p1.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet5.p1.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">16:15-16:45</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p26.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p26.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p26.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet5.p2.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet5.p2.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet5.p2.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">16:45-17:15</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p27.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p27.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p27.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet5.p3.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet5.p3.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet5.p3.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">17:15-17:45</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p28.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p28.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p28.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet5.p4.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet5.p4.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet5.p4.ct")}}</p>
             </div>
           </li>
         </ul>
         <div class="person">
           <p>Chair：</p>
           <p>Jun-Ou YANG</p>
+          <p>Xi-Nan Yi</p>
         </div>
       </div>
+      <img class="meet_bt" src="../static/img/meet_bt.png" alt="">
+      <ul class="ps-list">
+          <li v-for="item in 6" :key="item">
+            <img :src="repFn('meet5',item)" alt="">
+            <p class="name">{{repNameTxt('meet5',item)}}</p>
+            <p class="ctt">{{repCTxt('meet5',item)}}</p>
+          </li>
+      </ul>
     </div>
+    <!-- 分会场6 -->
     <div class="met-box" v-show="activeMetting == 7">
       <div class="line">{{$t("Meet.M7.m7")}}</div>
       <div class="time">
@@ -339,49 +404,51 @@
           <li>
             <span class="time-string">15:45-16:15</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p29.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p29.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p29.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet6.p1.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet6.p1.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet6.p1.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">16:15-16:45</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p30.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p30.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p30.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet6.p2.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet6.p2.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet6.p2.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">16:45-17:15</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p31.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p31.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p31.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet6.p3.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet6.p3.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet6.p3.ct")}}</p>
             </div>
           </li>
           <li>
             <span class="time-string">17:15-17:45</span>
             <div class="ct">
-              <p class="ft">{{$t("Meet.personC.pserson.p32.title")}}</p>
-              <p class="pt">{{$t("Meet.personC.pserson.p32.name")}}</p>
-              <p>{{$t("Meet.personC.pserson.p32.ct")}}</p>
+              <p class="ft">{{$t("Meet.personC.pserson.meet6.p4.title")}}</p>
+              <p class="pt">{{$t("Meet.personC.pserson.meet6.p4.name")}}</p>
+              <p>{{$t("Meet.personC.pserson.meet6.p4.ct")}}</p>
             </div>
           </li>
         </ul>
         <div class="person">
           <p>Chair：</p>
           <p>Wen ZENG</p>
+          <p>Chun-Lin Zou</p>
         </div>
       </div>
+      <img class="meet_bt" src="../static/img/meet_bt.png" alt="">
+      <ul class="ps-list">
+          <li v-for="item in 6" :key="item">
+            <img :src="repFn('meet6',item)" alt="">
+            <p class="name">{{repNameTxt('meet6',item)}}</p>
+            <p class="ctt">{{repCTxt('meet6',item)}}</p>
+          </li>
+      </ul>
     </div>
-    <ul class="ps-list">
-        <li v-for="item in 32" :key="item">
-          <img :src="repFn(item)" alt="">
-          <p class="name">{{repNameTxt(item)}}</p>
-          <p class="ctt">{{repCTxt(item)}}</p>
-        </li>
-    </ul>
   </div>
 </template>
 <script>
@@ -402,14 +469,15 @@ export default {
     changeMet(value){
       this.activeMetting = value
     },
-    repFn(index){
-      return require(`../static/img/person/${index}.png`)
+    repFn(file,index){
+      console.log(`../static/img/person/${file}/${index}.png`)
+      return require(`../static/img/person/${file}/${index}.png`)
     },
-    repNameTxt(index){
-      return this.$t(`Meet.personC.pserson.p${index}.name`)
+    repNameTxt(obj,index){
+      return this.$t(`Meet.personC.pserson.${obj}.p${index}.name`)
     },
-    repCTxt(index){
-      return this.$t(`Meet.personC.pserson.p${index}.ct`)
+    repCTxt(obj,index){
+      return this.$t(`Meet.personC.pserson.${obj}.p${index}.ct`)
     }
   }
 }
@@ -438,7 +506,7 @@ export default {
     justify-content: center;
     list-style-type: none;
     box-sizing: border-box;
-    margin-top:40px;
+    margin:43px 0 28px;
     padding:0;
     li{
       width:92px;
@@ -470,7 +538,7 @@ export default {
   }
   .met-box{
     width: 1200px;
-    margin:32px auto 0;
+    margin:40px auto 0;
     .time{
       width: 100%;
       display: flex;
@@ -559,14 +627,17 @@ export default {
   .ps-list{
       list-style-type: none;
       display: flex;
-      justify-content: space-between;
+      // justify-content: space-between;
+      justify-content: flex-start;
       flex-wrap: wrap;
       width: 1200px;
       margin:0 auto;
       padding:0;
+      overflow:hidden;
       li{
         width:285px;
         margin-bottom:40px;
+        margin-right:20px;
         img{
           width: 100%;
           height:340px;
@@ -594,6 +665,9 @@ export default {
           color: #999999;
           line-height: 20px;
         }
+      }
+      li:nth-child(4n){
+        margin-right:0;
       }
     }
   

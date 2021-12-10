@@ -9,6 +9,8 @@ const en = {
       content3: LG.Home.EN,
       content4: LG.Home.EN,
       content5: LG.Home.EN,
+      content6: LG.Home.EN,
+      content7: LG.Home.EN,
   },
   nav:{
     home:LG.nav.EN,
@@ -36,6 +38,13 @@ const en = {
     MO1:LG.meet.EN,
     MO2:LG.meet.EN,
     personC:LG.meet.EN,
+  },
+  Us:{
+    P1: LG.aboutUs.EN,
+    P2: LG.aboutUs.EN,
+    P3: LG.aboutUs.EN,
+    P4: LG.aboutUs.EN,
+    P5: LG.aboutUs.EN,
   }
 }
 export default en  //暴露出去

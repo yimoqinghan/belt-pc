@@ -9,6 +9,8 @@ const zh = {
     content3: LG.Home.ZH,
     content4: LG.Home.ZH,
     content5: LG.Home.ZH,
+    content6: LG.Home.ZH,
+    content7: LG.Home.ZH,
   },
   nav:{
     home:LG.nav.ZH,
@@ -36,6 +38,13 @@ const zh = {
     MO1:LG.meet.ZH,
     MO2:LG.meet.ZH,
     personC:LG.meet.ZH,
+  },
+  Us:{
+    P1: LG.aboutUs.ZH,
+    P2: LG.aboutUs.ZH,
+    P3: LG.aboutUs.ZH,
+    P4: LG.aboutUs.ZH,
+    P5: LG.aboutUs.ZH,
   }
 }
 export default zh  //暴露出去

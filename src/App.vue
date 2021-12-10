@@ -6,9 +6,9 @@
         <el-menu :default-active="activeIndex" :router="true" class="el-menu-demo" mode="horizontal">
           <el-menu-item index="1" :route="{path:'/home'}" >{{$t('nav.home.HOME')}}</el-menu-item>
           <el-menu-item index="2" :route="{path:'/metting'}" >{{$t('nav.home.InternationalCongre')}}</el-menu-item>
-          <el-menu-item index="3">{{$t('nav.home.newsEvents')}}</el-menu-item>
-          <el-menu-item index="4">{{$t('nav.home.AboutBRIIUA')}}</el-menu-item>
-          <el-menu-item index="5">{{$t('nav.home.CAST')}}</el-menu-item>
+          <el-menu-item index="3" :disabled="true">{{$t('nav.home.newsEvents')}}</el-menu-item>
+          <el-menu-item index="4" :route="{path:'/aboutUs'}">{{$t('nav.home.AboutBRIIUA')}}</el-menu-item>
+          <el-menu-item  @click="goHref">{{$t('nav.home.CAST')}}</el-menu-item>
         </el-menu>
         <div class="language-box" @click="changeLanguage">
           <img class="language-icon" src="./static/img/language_ch.png" alt="">
@@ -36,6 +36,9 @@ export default {
     }
   },
   methods:{
+    goHref(){
+      window.open('http://sj.cast.org.cn/', '_blank');
+    },
     changeLanguage(){
         /* this.$i18n.locale=='zh'?this.$i18n.locale='en':this.$i18n.locale='zh'   //设置中英文模式
         localStorage.setItem('languageSet',this.$i18n.locale)   //将用户设置存储到localStorage以便用户下次打开时使用此设置 */
@@ -49,6 +52,8 @@ html,body,#app{
   /* height:100%; */
   box-sizing: border-box;
   margin:0;
+  min-width: 1200px;
+  overflow-x: auto;
 }
 body{
   margin:0 !important;
@@ -71,6 +76,7 @@ body{
   box-sizing: border-box;
   border-bottom:none;
 }
+
 #app .el-menu.el-menu--horizontal{
   border-bottom: none;
 }
@@ -85,7 +91,8 @@ body{
   justify-content: center;
 }
 #app .el-main{
-  width: 1920px;
+  width: 100%;
+  min-width: 1200px;
   margin:0 auto;
   height:calc(100% - 80px);
   background: #fff;
@@ -116,5 +123,22 @@ body{
   width: 12px;
   height:12px;
   margin-right:5px;
+}
+@media screen and (min-width:1200px) and (max-width:1400px){
+    #app .el-menu-item{
+      padding:0 20px;
+    }
+    .logo{
+      margin-right:150px;
+    }
+}
+@media screen and (max-width:1200px){
+    #app .el-menu-item{
+      padding:0 10px;
+      font-size:18px;
+    }
+    .logo{
+      margin-right:150px;
+    }
 }
 </style>

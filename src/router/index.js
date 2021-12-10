@@ -21,12 +21,20 @@ export default new Router({
         }
     },
     {
-      path: '/metting',
-      name: 'metting',
-      component: () => import('@/view/meeting.vue'),
-      meta: {
-          title: '首页',
-      }
-  }
+        path: '/metting',
+        name: 'metting',
+        component: () => import('@/view/meeting.vue'),
+        meta: {
+            title: '首页',
+        }
+    },
+    {
+        path: '/aboutUs',
+        name: 'aboutUs',
+        component: () => import('@/view/aboutUs.vue'),
+        meta: {
+            title: '首页',
+        }
+    },
   ]
 })

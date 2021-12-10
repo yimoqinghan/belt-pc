@@ -5,16 +5,18 @@
       <img class="img2" src="../static/img/foot.png" alt="">
       <div class="content">
         <div class="content-top">
-          <img class="img" src="" alt="">
+          <img class="img" src="../static/img/def.jpg" alt="">
           <div class="rt">
-              <p style="margin-bottom:24px;">{{$t("Home.content1.p1")}}</p>
+              <!-- <p style="margin-bottom:24px;">{{$t("Home.content1.p1")}}</p>
               <p>{{$t("Home.content2.p2")}}</p>
-              <p v-show="$i18n.locale=='zh'" class="tt">{{$t("Home.content3.p3")}}</p>
+              <p v-show="$i18n.locale=='zh'" class="tt">{{$t("Home.content3.p3")}}</p> -->
+              <p style="margin-bottom:24px;">{{$t("Home.content6.p6")}}</p>
+              <p>{{$t("Home.content7.p7")}}</p>
           </div>
         </div>
-        <p v-show="$i18n.locale != 'zh'" class="tt">{{$t("Home.content3.p3")}}</p>
+        <!-- <p v-show="$i18n.locale != 'zh'" class="tt">{{$t("Home.content3.p3")}}</p>
         <p class="tt ts">{{$t("Home.content4.p4")}}</p>
-        <p class="tt">{{$t("Home.content5.p5")}}</p>
+        <p class="tt">{{$t("Home.content5.p5")}}</p> -->
       </div>
   </div>
 </template>
@@ -43,7 +45,7 @@ export default {
   }
   .main-img{
     width: 100%;
-    height:1000px;
+    /* height:1000px; */
   }
   .img1{
     width: 678px;
@@ -66,6 +68,10 @@ export default {
     left:0;
     bottom: 0;
   }
+  .img{
+    width: 100%;
+    height:100%;
+  }
   .content{
     width: 1200px;
     margin:0 auto;
@@ -75,6 +81,7 @@ export default {
     display: flex;
     justify-content: space-between;
     margin-bottom:24px;
+    align-items: flex-start;
   }
   .content-top img{
     width: 500px;
